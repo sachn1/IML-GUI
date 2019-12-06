@@ -11,7 +11,7 @@ The dataset considered for this particular task are the demographics and morphol
 Even though the intent of the task is not to come up with the best model, two algorithms were chosen as a motivation from http://wwwisg.cs.uni-magdeburg.de/visualisierung/wiki/data/media/files/misc/niemann_2018_cbms.pdf which was performed on the same dataset - Gradient Boosting Trees (also XGBoost) and Support Vector Machines. The best model were chosen based on nested cross validation of all three algorithms fit on three variations of the dataset - one where a standard normalization was applied, one where the dataset was transformed in to z-scale and one where no transformations were applied. Based on grid search hyperparameter tuning, XGBoost and SVM with a generalization performance of 65 and 64 percent accuracy on the z-score transformed dataset where chosen for further study.
 
 ![alt text](img/performance_scores.png)
-![alt text](img/Model_details.jpg)
+![alt text](img/Model_details.JPG)
 
 ## Questions
   1. Which are the important features that contributed towards the prediction of the aneurysm classes?
@@ -23,7 +23,7 @@ Even though the intent of the task is not to come up with the best model, two al
 
 ### Model Reliance
   ![alt text](img/PermutationFeatureImportanceAlgm.png)
-  ![alt text](img/Model_reliance.png)
+  ![alt text](img/Model_reliance.PNG)
 ### Individual Conditional Expectation
   ![alt text](img/iceplot_gbt_ei_1.jpg)
 ### Counterfactuals
@@ -31,4 +31,4 @@ Even though the intent of the task is not to come up with the best model, two al
 ### Decision Ruleset
 
 ## Graphical User Interface for the Visualization 
-  ![alt text](img/GUI_sample.png)
+  ![alt text](img/GUI_sample.PNG)
