@@ -19,9 +19,11 @@ Even though the intent of the task is not to come up with the best model, two al
 ## Interpretable Machine Learning Models
 
 ### Model Reliance
-  <img src="img/model_reliance_gbt.jpg" height="300">
+  ![alt text](img/model_reliance_gbt.jpg)
 ### Individual Conditional Expectation
+  ![alt text](img/iceplot_gbt_ei_1.jpg)
 ### Counterfactuals
+  ![alt text](img/counterfactual_gbt_52_beta.jpg)
 ### Decision Ruleset
 
 ## Graphical User Interface for the Visualization 
