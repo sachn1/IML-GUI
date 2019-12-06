@@ -22,7 +22,11 @@ Even though the intent of the task was not to come up with the best model, two a
 ## Interpretable Machine Learning Models
 
 ### Model Reliance
+
+Model-agnostic interpretation methods provide great deal of flexibility. This means, various interpretation methods can anyway be applied irrespective of which machine learning model is used. On the other hand, Model-specific interpretation methods restrict  the  explanation to that model alone. For example, algorithms like RandomForest and XGBoost automatically calculates important features on a trained predictive model. The second distinction is between global and local feature importance. Local feature importance evaluates the importance of features in case of prediction of a sub-problem. Whereas, global feature importance considers the overall predictions into account. Thus, to define the most important global features irrespective of the model used, we went for a model agnostic approach called model reliance (MR). MR is a permutation feature importance algorithm. The whole process of permutation feature importance is as explained in the figure given below. 
   ![alt text](img/PermutationFeatureImportanceAlgm.png)
+  
+We implemented model reliance for XGBoost and SVM models and have provided the results in terms of a horizontal bar chart. The MR measure for each instance was the subtraction between the two errors. This could possibly be a workaround when the original estimated error is zero.  
   ![alt text](img/Model_reliance.PNG)
 ### Individual Conditional Expectation
   ![alt text](img/iceplot_gbt_ei_1.jpg)
