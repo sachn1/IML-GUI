@@ -1,4 +1,4 @@
-# Study and Visualization of Interpretable Machine Learning 
+# Study and Visualization of Model Agnostic Interpretable Machine Learning Approaches
 
 The main task is to implement few Interpretable Machine Learning models that could help answer questions of the underlying classification black-box model. The main aim here is to make the end-user trust the model and help her/him understand why the model predicted the way it did. This could help the user take better decisions. 
   
