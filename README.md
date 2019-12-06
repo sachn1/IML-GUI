@@ -1,14 +1,14 @@
 # Study and Visualization of Model Agnostic Interpretable Machine Learning Approaches
 
-The main task is to implement few Interpretable Machine Learning models that could help answer questions of the underlying classification black-box model. The main aim here is to make the end-user trust the model and help her/him understand why the model predicted the way it did. This could help the user take better decisions. 
+The main task was to implement few Interpretable Machine Learning models that could help answer some questions of the underlying classification black-box model. The main aim here is to help make the end-user trust the model why it predicted the way it did. This could help the user make better decisions. 
   
 ## Dataset
 
-The dataset considered for this particular task are the demographics and morphological features of 100 intracranial aneurysms recorded at the university hospital of Magdeburg, Germany. This small dataset corresponds to 93 patients. There are few missing values in the otherwise clean data. Due to the issues of data privacy, the dataset is not uploaded in the repository along with the source code and other resources. 
+The dataset considered for this particular task was the morphological and demographic features of 100 intracranial aneurysms corresponding to 93 patients recorded at the university hospital of Magdeburg, Germany. There were few missing values in the otherwise clean data. Due to the issues of data privacy, the dataset is not uploaded in the repository along with the source code and other resources. 
 
 ## Model Design
 
-Even though the intent of the task is not to come up with the best model, two algorithms were chosen as a motivation from http://wwwisg.cs.uni-magdeburg.de/visualisierung/wiki/data/media/files/misc/niemann_2018_cbms.pdf which was performed on the same dataset - Gradient Boosting Trees (also XGBoost) and Support Vector Machines. The best model were chosen based on nested cross validation of all three algorithms fit on three variations of the dataset - one where a standard normalization was applied, one where the dataset was transformed in to z-scale and one where no transformations were applied. Based on grid search hyperparameter tuning, XGBoost and SVM with a generalization performance of 65 and 64 percent accuracy on the z-score transformed dataset where chosen for further study.
+Even though the intent of the task was not to come up with the best model, two algorithms were chosen based on the motivation from http://wwwisg.cs.uni-magdeburg.de/visualisierung/wiki/data/media/files/misc/niemann_2018_cbms.pdf where the comparison between different models was performed on the same dataset - Gradient Boosting Trees (also XGBoost) and Support Vector Machines. The best model was chosen based on nested cross-validation of all three algorithms fit on three variations of the dataset - one where a standard normalization was applied, one where the dataset was transformed into Z-scale and one where no transformations were applied. Based on grid search hyperparameter tuning, XGBoost and SVM with a generalization performance of 65 and 64 per cent accuracy on the z-score transformed dataset were chosen for further study.
 
 ![alt text](img/performance_scores.PNG)
 ![alt text](img/Model_details.JPG)
@@ -16,8 +16,8 @@ Even though the intent of the task is not to come up with the best model, two al
 ## Questions
   1. Which are the important features that contributed towards the prediction of the aneurysm classes?
   2. Does change in a feature value affect prediction of an instance?
-  3. What are the possible range of values a feature of an instance could take for a particular aneurysm class? Or, at which value of the feature does the classification label changes?
-  4. Which minimal set of features played a significant role in prediction of aneurysm classes and how?
+  3. What is the possible range of values a feature of an instance could take for a particular aneurysm class? Or, at which value of the feature does the classification label changes?
+  4. Which minimal set of features played a significant role in the prediction of aneurysm classes and how?
 
 ## Interpretable Machine Learning Models
 
