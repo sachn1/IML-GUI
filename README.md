@@ -29,6 +29,6 @@ Even though the intent of the task was not to come up with the best model, two a
 ### Counterfactuals
   ![alt text](img/counterfactual_gbt_52_beta.jpg)
 ### Decision Ruleset
-
+![alt text](img/decision_ruleset.png)
 ## Graphical User Interface for the Visualization 
   ![alt text](img/GUI_sample.PNG)
