@@ -29,9 +29,21 @@ Model-agnostic interpretation methods provide great deal of flexibility. This me
 We implemented model reliance for XGBoost and SVM models and have provided the results in terms of a horizontal bar chart. The MR measure for each instance was the subtraction between the two errors. This could possibly be a workaround when the original estimated error is zero.  
   ![alt text](img/Model_reliance.PNG)
 ### Individual Conditional Expectation
+
+A black-box model can have complicated parameters which can range from a few thousand to millions for a real-world dataset. A key question about model interpretation is 'How does the model inputs work?' or to rephrase 'How does change in a particular variable affect the model's prediction?'. One of the ways as discussed in the previous section, feature importance shows the strength of the relationship between a variable and model's prediction. But it lacks in providing any functional relationship between model inputs and predictions.  
+
+Individual conditional expectations (ICE) is a disintegrated form of Partial Dependence Plot (PDP) from a visual perspective. It plots one individual line graph for every instance which shows the output change when values of feature changes. Each line establishes a homogeneous (if any) relationship between an observation with different values of the feature in focus thereby giving end-user several inferences of conditional relationships modeled by the black-box algorithm.   
   ![alt text](img/iceplot_gbt_ei_1.jpg)
-### Counterfactuals
+  The above ICE plot shows that of the feature 'ch\_volume' where x-axis shows range of feature value and y-axis shows values ranging from 0 to 1 showing probability of rupture classification. Each line also shows rupture status and a PDP shows overall trend.
+  
+### Density plots to explain Counterfactuals
+
+Counterfactual explanations are in form of 'if x had not occurred, y would not have occurred'. Counterfactual examples are hypothetical instances which flips the prediction of the original instance. Due to the large number of instances, it is usually challenging to represent the higher number of counterfactuals in a more meaningful format. So for this task, the nearest counterfactual for every feature is considered and hence shown using a density plot. 
+
+We select one instance from the data in order to explain the learned model. We use range of each feature (min value of the feature in the dataset and max value of the feature in the dataset) to create example counterfactual value. For each instance, we change only one feature value at a time and replace it with the calculated feature value to create our example counterfactual instance. We create 100 such example counterfactual instances. The reason for choosing 100 was that, each time the number of counterfactual instances for an instance would have exactly 99 (since the original dataset had 100) so that perturbing feature values within a range for a good number of instances would be a good justification rather than randomly choosing a number. We now look for counterfactual instances that can flip the target value from 'ruptured' to 'unruptured' or vice versa. We then predict the outcome of example instances using our model. We then return the first example instance that changes the target value of the instance as our counterfactual instance. 
   ![alt text](img/counterfactual_gbt_52_beta.jpg)
+The above counterfactual represents the density plot of the feature 'ch_volume' for the instance number 77. The original value of the instance is represented by orange dashed line and the counterfactual value is represented by blue dashed line. As visible from the plot, the target value of the instance 77 changes from ruptured to non ruptured if the value of ch\_volume changes from 48.07 to 52.83. 
+
 ### Decision Ruleset
 ![alt text](img/decision_ruleset.png)
 ## Graphical User Interface for the Visualization 
