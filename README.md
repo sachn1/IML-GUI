@@ -33,7 +33,7 @@ We implemented model reliance for XGBoost and SVM models and have provided the r
 A black-box model can have complicated parameters which can range from a few thousand to millions for a real-world dataset. A key question about model interpretation is 'How does the model inputs work?' or to rephrase 'How does change in a particular variable affect the model's prediction?'. One of the ways as discussed in the previous section, feature importance shows the strength of the relationship between a variable and model's prediction. But it lacks in providing any functional relationship between model inputs and predictions.  
 
 Individual conditional expectations (ICE) is a disintegrated form of Partial Dependence Plot (PDP) from a visual perspective. It plots one individual line graph for every instance which shows the output change when values of feature changes. Each line establishes a homogeneous (if any) relationship between an observation with different values of the feature in focus thereby giving end-user several inferences of conditional relationships modeled by the black-box algorithm.   
-  ![alt text](img/iceplot_gbt_ei_1.jpg)
+  ![alt text](img/cen_ice_plot_feat_ch_volume.jpg)
   The above ICE plot shows that of the feature 'ch_volume' where x-axis shows range of feature value and y-axis shows values ranging from 0 to 1 showing probability of rupture classification. Each line also shows rupture status and a PDP shows overall trend.
   
 ### Density plots to explain Counterfactuals
