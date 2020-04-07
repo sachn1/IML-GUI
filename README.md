@@ -1,6 +1,6 @@
 # Study and Visualization of Model Agnostic Interpretable ML Approaches
 
-The main task was to implement few Interpretable Machine Learning models that could help answer some questions of the underlying classification black-box model. The main aim here is to help make the end-user trust the model and help one understand why it predicted the way it did. This could help the user make better decisions. 
+The main task was to implement few **Interpretable Machine Learning models** that could help answer some questions of the black-box model's classification predictions of the aneurysm's rupture status. The main aim here is to help make the end-user trust the model and to understand why it predicted the way it did with the help of model-agnostic explanations. 
   
 ## Dataset
 
